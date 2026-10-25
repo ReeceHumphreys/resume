@@ -1,0 +1,88 @@
+% Reece Humphreys -- Resume
+% Content only. Layout comes from techresume.cls (keep it in the same folder).
+% From the repo root: make
+% Rebuild on save: make watch WATCH=src/reece-humphreys-resume.tex
+\documentclass{techresume}
+
+\name{Reece Humphreys}
+\contact{%
+  \link{https://reecehumphreys.com}{reecehumphreys.com}\sep
+  \link{https://github.com/reecehumphreys}{github.com/reecehumphreys}\sep
+  \link{https://linkedin.com/in/reecehumphreys/}{linkedin.com/in/reecehumphreys/}%
+}
+
+\begin{document}
+\makeheader
+
+% ================= WORK EXPERIENCE =================
+\section{Work Experience}
+
+\begin{job}{SpaceX}{Seattle, WA}{GNC Engineer}{Jul. 2026 -- Present}
+  \item Developing guidance, navigation, and control for the worlds largest satellite constellation.
+\end{job}
+
+\begin{job}{Varda Space Industries}{El Segundo, CA}{Spacecraft Engineering Intern}{May. 2026 -- Aug. 2026}
+  \item Built a high-availability ground software service for real-time ingestion and distribution of Iridium GPS telemetry, publishing capsule re-entry data through Pub/Sub and Telegraf pipelines to mission control Grafana dashboards.
+  \item Updated spacecraft state machines for upcoming missions to enable status visibility and autonomous abort handling during on-orbit automated checkout sequences for the bus heater systems.
+\end{job}
+
+\begin{job}{Autonomous Vehicle Systems Laboratory, CCAR}{Boulder, CO}{Graduate Research Assistant / Simulation Software Lead}{Aug. 2025 -- May. 2026}
+  \item Lead maintainer for the Basilisk Astrodynamics Simulation Framework, overseeing pull request reviews, issue triage, release planning, and development of new framework infrastructure and capabilities.
+  \item Led redesign of Basilisk infrastructure and release workflows, establishing new packaging, deployment, versioning, and distribution strategies including automated Python wheel distribution, Docker container support, and on-demand simulation input ingestion.
+  \item Architected and implemented a modular plugin framework decoupling Basilisk core compilation from external modules, enabling scalable multi-language extension development and broader ecosystem integration.
+  \item Collaborated directly with aerospace industry partners, including Astroscale and Ten One Aerospace, to roadmap future Basilisk infrastructure and feature requests and provide technical guidance on plugin development.
+\end{job}
+
+\begin{job}{CesiumAstro}{Westminster, CO}{Guidance, Navigation, and Control Intern}{Jan. 2026 -- Apr. 2026}
+  \item Architected and developed distributed Monte Carlo infrastructure and CI/CD processes and workflows to support scaling GNC capabilities for the Element-1 Mission. Included automated server provisioning, distributed compute orchestration, and web-based visualization dashboards. Coordinated efforts across IT, GNC, and SRE teams.
+  \item Extended high-fidelity simulation tooling to support multi-spacecraft scenarios and parameterized vehicle configurations, reducing effort required to evaluate GNC performance across spacecraft block upgrades.
+  \item Developed Monte Carlo simulations quantifying GPS-denied ground-target pointing degradation, including LOS error, ground miss distance, and navigation performance impacts.
+\end{job}
+
+\begin{job}{Starfish Space}{Seattle, WA}{Flight Algorithms Intern}{May. 2025 -- Aug. 2025}
+  \item Identified telemetry bandwidth constraints impacting Otter Pup 2 commissioning and led redesign of the onboard telemetry and data management architecture through PDR and implementation, coordinating cross-team updates to telemetry packet data schemes and onboard data workflows within constrained early mission downlink budgets.
+  \item Developed Processor-in-the-Loop testing infrastructure to validate detumble, spiral-out, and orbit-raise algorithm development in support of NASA's SSPICY mission.
+  \item Optimized Otter flight software patching process to minimize system resource usage for a U.S. Space Force mission.
+\end{job}
+
+\begin{job}{ZeroC}{Jupiter, FL}{Lead DevOps / Software Engineer}{Jan. 2022 -- Jul. 2024}
+  \item Owned release engineering, developer infrastructure, and operational tooling supporting the launch and ongoing evolution of the IceRPC product across C\#, Rust, and web-based environments.
+  \item Architected and operated build, packaging, CI/CD, and release infrastructure for the Slice compiler and IceRPC framework ecosystem, enabling reliable multi-platform development, validation, and distribution workflows.
+  \item Designed and deployed observability and telemetry infrastructure using InfluxDB and Grafana to monitor deployed applications, analyze performance bottlenecks, and improve operational visibility across engineering and release workflows.
+\end{job}
+
+\newpage
+
+% ================= EDUCATION =================
+\section{Education}
+
+\school{University of Colorado Boulder}{Smead Aerospace Engineering}{GPA: 4.0/4.0}
+       {Master of Science in Aerospace Engineering}{Aug. 2024 -- Dec. 2026}
+
+\school{Florida Atlantic University}{Harriet L. Wilkes Honors College}{GPA: 3.94/4.0}
+       {Bachelor of Science in Mathematics and Physics; Minor in Data Science}{Aug. 2017 -- May 2021}
+
+% ================= LEADERSHIP & RECOGNITION =================
+\section{Leadership \& Recognition}
+
+\para{In both academic and professional settings, I have consistently sought opportunities to mentor others and lead technical initiatives. I served as a peer mentor both at Florida Atlantic University and the University of Colorado Boulder and recently received the Graduate Peer Mentoring Impact Recognition Award (2026) from CU Boulder. During my undergraduate studies at FAU, I also served as an Orientation and Welcome Leader, where I was responsible for mentoring, supporting, and onboarding incoming students. My performance as an orientation received recognition for excellence in problem-solving and leadership (2018).}
+
+\para{Community outreach and service have also been longstanding priorities throughout my career. I received the University Scholar Award (2021) in recognition of simultaneous academic achievement and community engagement, and the Kenan Social Engagement Scholar Award (2021) for my nonprofit-focused social entrepreneurship initiatives. I was additionally invited to present at a South Florida nonprofit symposium on improving coordination and collaboration between nonprofit organizations (2022). My main areas of engagement in the nonprofit sector involve organizations that provide academic opportunities and mentorship to underprivileged communities.}
+
+% ================= PROJECTS =================
+\section{Projects}
+
+\begin{project}{Ground Pass Simulation and Visualization Tool}
+  \item Developed a mission operations visualization tool using Next.js, React, WebAssembly, and C++ supporting live orbit propagation, ground pass visualization, and range/range-rate generation directly in the browser. Supports configurable orbital parameters and ground station geometries. Was used for orbit determination algorithm validation and ground pass intuition development for personal development. Currently hosted on my personal website.
+\end{project}
+
+\begin{project}{Low Earth Orbit Orbital Debris Cloud Evolution Thesis}
+  \item Undergraduate thesis which modeled the debris cloud evolution of collision and explosion events of satellites in LEO. Included follow-on collaboration with the University College London Satellite Geodesy and Navigation Laboratory. Won Outstanding Thesis award (2021).
+\end{project}
+
+% ================= SKILLS =================
+\section{Skills}
+
+\skills{Rust, Python, C++, Astrodynamics, InfluxDB, Grafana, GMAT, Distributed Systems, Network Architectures, CI/CD}
+
+\end{document}
