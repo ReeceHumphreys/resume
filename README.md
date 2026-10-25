@@ -14,7 +14,7 @@ A one-page resume for pdfLaTeX. Layout is `src/techresume.cls`. Your text goes i
 make watch WATCH=src/your-name.tex
 ```
 
-`src/reece-humphreys-resume.tex` is a filled-in example of the same class.
+`src/reece-humphreys-resume.tex` is a filled-in example of the same class. A push or pull request builds that file and uploads the PDF as an Actions artifact named `resume`.
 
 The font is TeX Gyre Termes, a Times clone included with TeX. On the `\documentclass` line, `a4paper` switches from US Letter to A4.
 

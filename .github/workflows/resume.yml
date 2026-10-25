@@ -1,0 +1,23 @@
+name: resume
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  pdf:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Install TeX
+        run: sudo apt-get update && sudo apt-get install -y latexmk texlive-latex-extra texlive-fonts-recommended
+        env:
+          DEBIAN_FRONTEND: noninteractive
+
+      - run: make build/reece-humphreys-resume.pdf
+
+      - uses: actions/upload-artifact@v7
+        with:
+          name: resume
+          path: build/reece-humphreys-resume.pdf
